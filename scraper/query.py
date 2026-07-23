@@ -1,18 +1,3 @@
-"""Phase 4: retrieve relevant chunks for a question and generate an answer.
-
-This is the "R" (retrieval) + "G" (generation) half of RAG.
-Phase 3 (build_index.py) built the FAISS index -- this script uses it.
-
-Uses Groq (free API, no local install needed) to generate the final answer.
-
-Setup:
-    1. Get a free API key: https://console.groq.com/keys
-    2. export GROQ_API_KEY="your-key-here"
-    3. pip install groq
-
-Usage:
-    python query.py "What time does the library open?"
-"""
 
 from pathlib import Path
 import json
