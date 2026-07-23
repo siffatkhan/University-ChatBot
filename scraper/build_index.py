@@ -1,9 +1,4 @@
-"""Phase 3: embed chunk records and build a FAISS index.
 
-The canonical chunk file lives at data/processed/chunks.json. A legacy
-chunks.json in the scraper root is still accepted as a fallback so the script
-remains usable while the project layout is being cleaned up.
-"""
 
 from pathlib import Path
 import json
