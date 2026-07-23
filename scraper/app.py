@@ -1,18 +1,3 @@
-"""
-FastAPI wrapper around query.py -- exposes the same retrieve() + generate_answer()
-logic as a web API, and serves a small chat UI on top of it.
-
-query.py itself is untouched and still works standalone from the CLI --
-this file imports its functions rather than duplicating them, so there's
-exactly one place that knows how retrieval/generation actually works.
-
-
-Run:
-    uvicorn app:app --reload
-
-Then open http://127.0.0.1:8000 in a browser.
-"""
-
 import os
 import time
 from pathlib import Path
