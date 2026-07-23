@@ -1,0 +1,7 @@
+beautifulsoup4
+requests
+pymupdf
+pandas
+sentence-transformers
+faiss-cpu
+playwright

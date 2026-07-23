@@ -1,0 +1,77 @@
+annotated-doc==0.0.4
+annotated-types==0.7.0
+anyio==4.14.2
+beautifulsoup4==4.15.0
+certifi==2026.6.17
+charset-normalizer==3.4.9
+click==8.4.2
+distro==1.9.0
+exceptiongroup==1.3.1
+faiss-cpu==1.8.0
+filelock==3.32.0
+fsspec==2026.6.0
+greenlet==3.5.3
+groq==1.5.0
+h11==0.16.0
+hf-xet==1.5.2
+httpcore==1.0.9
+httpx==0.28.1
+huggingface_hub==0.36.2
+idna==3.18
+Jinja2==3.1.6
+joblib==1.5.3
+markdown-it-py==4.2.0
+MarkupSafe==3.0.3
+mdurl==0.1.2
+mpmath==1.3.0
+networkx==3.4.2
+numpy==1.26.4
+packaging==26.2
+pillow==12.3.0
+playwright==1.61.0
+pydantic==2.13.4
+pydantic_core==2.46.4
+pyee==13.0.1
+Pygments==2.20.0
+pymupdf==1.28.0
+PyYAML==6.0.3
+regex==2026.7.19
+requests==2.34.2
+rich==15.0.0
+safetensors==0.8.0
+scikit-learn==1.7.2
+scipy==1.15.3
+sentence-transformers==2.7.0
+shellingham==1.5.4
+sniffio==1.3.1
+soupsieve==2.9
+sympy==1.14.0
+threadpoolctl==3.6.0
+tokenizers==0.19.1
+torch==2.2.2
+tqdm==4.69.0
+transformers==4.44.2
+typer==0.27.0
+typing-inspection==0.4.2
+typing_extensions==4.16.0
+urllib3==2.7.0
+
+# --- Phase 1: scraping ---
+requests
+beautifulsoup4
+playwright
+
+# --- Phase 3: embedding + vector search ---
+# numpy/torch pinned first -- sentence-transformers needs torch>=2.4, and a
+# newer numpy installed alongside an older torch causes ABI-mismatch import
+# errors (see README "Known environment issues")
+numpy<2
+torch>=2.4
+sentence-transformers
+faiss-cpu
+
+# --- Phase 4: LLM + web backend ---
+groq
+fastapi
+uvicorn
+pydantic

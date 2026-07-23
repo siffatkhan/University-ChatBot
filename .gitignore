@@ -1,0 +1,36 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+scraper/data/index/
+scraper/data/processed/chunks.json
+scraper/data/processed/knowledge_base_v2.json
+scraper/scrape_website.py
+scraper/rescrape_faculty_playwright.py
+
+# --- secrets / credentials ---
+.env
+*.env
+.env.local
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# --- regenerable build artifacts (don't need to be in git) ---
+data/index/faiss.index
+data/faculty_raw/
+data/pdfs/
+*.html
+!static/index.html
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- editor junk ---
+.vscode/
+.idea/
