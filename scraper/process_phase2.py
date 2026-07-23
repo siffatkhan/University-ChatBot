@@ -1,10 +1,4 @@
-"""Phase 2: extract and clean raw scrape output into a unified knowledge base.
 
-This script reads the existing crawler outputs under scraper/data/raw and
-scraper/data/pdfs, extracts clean text from HTML and PDFs, identifies faculty
-and contact table content, deduplicates near-identical entries, and writes a
-single processed JSON file for downstream chunking / embeddings.
-"""
 
 from __future__ import annotations
 
